@@ -7,3 +7,33 @@
 // Override greet: Override the greet method to add the extra exclamation points to the end. For example, greet might return "Hello, Grant!!!". Note, the original greet method already has one exclamation point, so LoudGreeter starts with two exclamation points even before calling addVolume.
 // Jest Tests: Test with and without calling addVolume. Test calling addVolume different numbers of times.
 
+import { Greeter} from "./greeter";
+
+export class LoudGreeter extends Greeter {
+
+    private extra:string = '!';
+
+    addVolume(): void {
+        this.extra += '!';
+    }
+
+    greet(name:string) {
+        super.greet(name)
+        return `${this.greeting}, ${name}${this.extra}!`
+    }
+    
+}
+
+export let greetText = new LoudGreeter('Hello ');
+
+console.log(greetText.greet('Ramiro'))
+
+
+
+//console.log(greetLynch)
+
+
+// let addExclamation = moreVolume.addVolume()
+
+// console.log(addExclamation)
+

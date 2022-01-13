@@ -5,7 +5,7 @@ export class Greeter  {
         this.greeting = greeting;
     }
     greet(name:string) {
-        return `${this.greeting}, ${name}`
+        return `${this.greeting}, ${name}!`
     }
 }
 
