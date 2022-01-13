@@ -17,23 +17,21 @@ export class LoudGreeter extends Greeter {
         this.extra += '!';
     }
 
-    greet(name:string) {
-        super.greet(name)
-        return `${this.greeting}, ${name}${this.extra}!`
+    greet(name:string):string{
+        
+        return super.greet(name) + `${this.extra}!`
     }
     
 }
 
-export let greetText = new LoudGreeter('Hello ');
+export let greetText = new LoudGreeter('Hello')
 
-console.log(greetText.greet('Ramiro'))
-
-
-
-//console.log(greetLynch)
+let addVolume = greetText.greet('Rami')
 
 
-// let addExclamation = moreVolume.addVolume()
+console.log(addVolume)
 
-// console.log(addExclamation)
+
+
+
 
