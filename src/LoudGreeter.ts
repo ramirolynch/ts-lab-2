@@ -26,6 +26,8 @@ export class LoudGreeter extends Greeter {
 
 export let greetText = new LoudGreeter('Hello')
 
+greetText.addVolume()
+
 let addVolume = greetText.greet('Rami')
 
 
