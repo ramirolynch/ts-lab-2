@@ -24,7 +24,21 @@ greetText.addVolume()
 export let addVolume = greetText.greet('Rami')
 
 
-console.log(addVolume)
+console.log(addVolume);
+
+
+
+(async () => {
+    const name = await promptly.prompt('Name: ');
+    console.log(greetText.greet(name));
+})();
+
+
+
+
+
+
+
 
 
 
