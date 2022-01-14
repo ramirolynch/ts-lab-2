@@ -1,4 +1,5 @@
 import { Greeter} from "./greeter";
+const promptly = require('promptly');
 
 export class JavascriptGreeter extends Greeter {
 
@@ -9,5 +10,11 @@ export class JavascriptGreeter extends Greeter {
 
 export let greetFriend: Greeter = new JavascriptGreeter('John')
 
-export let greetJohn:string = greetFriend.greet('John')
+export let greetJohn:string = greetFriend.greet('John');
+
+(async () => {
+    const name = await promptly.prompt('Name: ');
+    console.log(greetFriend.greet(name));
+})();
+
 

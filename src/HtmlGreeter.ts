@@ -1,5 +1,6 @@
 
 import { Greeter} from "./greeter";
+const promptly = require('promptly');
 
 export class HtmlGreeter extends Greeter {
 
@@ -22,6 +23,12 @@ let firstGreet = new HtmlGreeter('hello my friend', 'h3')
 
 export let greetRami = firstGreet.greet('Rocky')
 
-console.log(greetRami)
+console.log(greetRami);
+
+(async () => {
+    const name = await promptly.prompt('Name: ');
+    console.log(firstGreet.greet(name));
+})();
+
 
 
