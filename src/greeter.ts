@@ -1,5 +1,8 @@
 const promptly = require('promptly');
 
+import chalk from 'chalk';
+
+
 export class Greeter  {
     greeting: string;
     constructor(greeting:string) {

@@ -22,6 +22,7 @@ export class HtmlGreeter extends Greeter {
 let firstGreet = new HtmlGreeter('hello my friend', 'h3')
 
 export let greetRami = firstGreet.greet('Rocky')
+export let greetAnton = firstGreet.greet('Anton')
 
 console.log(greetRami);
 
